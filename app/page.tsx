@@ -149,15 +149,18 @@ export default function Home() {
           style={{
             maxWidth: "1100px",
             margin: "0 auto",
-            padding: "4rem 2rem 3.5rem",
+            padding: "5.5rem 2rem 5rem",
             display: "grid",
             gridTemplateColumns: "1fr 1px 1fr",
-            gap: "0 3rem",
+            gap: "0 4rem",
             alignItems: "center",
           }}
         >
           {/* Left col */}
           <div className="fade-up fade-up-1">
+            <div className="stamp" style={{ marginBottom: "1.5rem" }}>
+              Social Media Strategist
+            </div>
             <h1
               style={{
                 fontFamily: "var(--font-playfair)",
@@ -211,7 +214,7 @@ export default function Home() {
 
           {/* Vertical rule */}
           <div
-            style={{ background: "#444", width: "1px", alignSelf: "stretch" }}
+            style={{ background: "#666", width: "2px", alignSelf: "stretch", minHeight: "300px" }}
           />
 
           {/* Right col */}
@@ -614,11 +617,11 @@ export default function Home() {
                     alignItems: "center",
                     justifyContent: "center",
                     padding: "2rem",
-                    minHeight: "130px",
+                    minHeight: "160px",
                   }}
                 >
                   {i === 0 && (
-                    <svg width="80" height="70" viewBox="0 0 80 70" fill="none">
+                    <svg width="100" height="90" viewBox="0 0 80 70" fill="none">
                       <rect
                         x="5"
                         y="10"
@@ -677,7 +680,7 @@ export default function Home() {
                     </svg>
                   )}
                   {i === 1 && (
-                    <svg width="80" height="70" viewBox="0 0 80 70" fill="none">
+                    <svg width="100" height="90" viewBox="0 0 80 70" fill="none">
                       <polyline
                         points="8,60 20,35 32,45 44,20 56,30 68,10"
                         stroke="var(--ink)"
@@ -711,7 +714,7 @@ export default function Home() {
                     </svg>
                   )}
                   {i === 2 && (
-                    <svg width="80" height="70" viewBox="0 0 80 70" fill="none">
+                    <svg width="100" height="90" viewBox="0 0 80 70" fill="none">
                       <rect
                         x="10"
                         y="5"
