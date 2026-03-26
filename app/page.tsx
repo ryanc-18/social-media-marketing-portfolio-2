@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const NAV_LINKS = ["About", "Blog", "Contact"];
 
@@ -35,6 +35,14 @@ export default function Home() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
+  const [navHeight, setNavHeight] = useState(0);
+
+  useEffect(() => {
+    if (navRef.current) {
+      setNavHeight(navRef.current.offsetHeight);
+    }
+  }, []);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -45,6 +53,7 @@ export default function Home() {
     <div className="min-h-screen">
       {/* ── NAV ───────────────────────────────────────────── */}
       <header
+        ref={navRef}
         style={{
           background: "var(--nav-bg)",
           borderBottom: "1px solid #a03545",
@@ -143,6 +152,9 @@ export default function Home() {
         style={{
           borderBottom: "3px double var(--nav-bg)",
           background: "var(--nav-bg)",
+          position: "sticky",
+          top: navHeight,
+          zIndex: 1,
         }}
       >
         <div
@@ -329,6 +341,12 @@ export default function Home() {
         id="about"
         style={{
           padding: "5rem 2rem",
+          position: "relative",
+          zIndex: 2,
+          background: "var(--cream)",
+          borderTopLeftRadius: "6px",
+          borderTopRightRadius: "6px",
+          boxShadow: "0 -12px 40px rgba(0,0,0,0.3)",
           borderBottom: "3px double var(--nav-bg)",
         }}
       >
@@ -532,6 +550,8 @@ export default function Home() {
           padding: "5rem 2rem",
           background: "var(--cream-dark)",
           borderBottom: "3px double var(--nav-bg)",
+          position: "relative",
+          zIndex: 2,
         }}
       >
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
@@ -843,7 +863,7 @@ export default function Home() {
       </section>
 
       {/* ── CONTACT ───────────────────────────────────────── */}
-      <section id="contact" style={{ padding: "5rem 2rem" }}>
+      <section id="contact" style={{ padding: "5rem 2rem", position: "relative", zIndex: 2, background: "var(--cream)" }}>
         <div style={{ maxWidth: "700px", margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <p className="ornament">✦ ✦ ✦</p>
@@ -1068,6 +1088,8 @@ export default function Home() {
           padding: "1.5rem 2rem",
           display: "flex",
           justifyContent: "space-between",
+          position: "relative",
+          zIndex: 2,
           alignItems: "center",
         }}
       >
