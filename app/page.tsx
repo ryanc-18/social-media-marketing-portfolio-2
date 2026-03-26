@@ -47,7 +47,7 @@ export default function Home() {
       <header
         style={{
           background: "var(--nav-bg)",
-          borderBottom: "1px solid #333",
+          borderBottom: "1px solid #a03545",
           position: "sticky",
           top: 0,
           zIndex: 100,
@@ -56,7 +56,7 @@ export default function Home() {
         {/* Top strip */}
         <div
           style={{
-            borderBottom: "1px solid #444",
+            borderBottom: "1px solid #a03545",
             padding: "0.3rem 2rem",
             display: "flex",
             justifyContent: "space-between",
@@ -65,18 +65,18 @@ export default function Home() {
         >
           <span
             style={{
-              color: "#999",
+              color: "#e0c4cc",
               fontSize: "0.72rem",
               letterSpacing: "0.12em",
               fontFamily: "var(--font-garamond)",
               fontStyle: "italic",
             }}
           >
-            Est. 2024 — Social Media Marketing
+            Est. 2026 — Social Media Marketing
           </span>
           <span
             style={{
-              color: "#999",
+              color: "#e0c4cc",
               fontSize: "0.72rem",
               letterSpacing: "0.12em",
               fontFamily: "var(--font-garamond)",
@@ -104,7 +104,7 @@ export default function Home() {
               letterSpacing: "0.02em",
             }}
           >
-            Jane Doe
+            Megan Chin
           </span>
 
           <nav style={{ display: "flex", gap: "2.5rem", alignItems: "center" }}>
@@ -113,7 +113,7 @@ export default function Home() {
                 key={link}
                 href={`#${link.toLowerCase()}`}
                 style={{
-                  color: "#d4cbbb",
+                  color: "#edd8dc",
                   fontFamily: "var(--font-playfair)",
                   fontSize: "0.88rem",
                   letterSpacing: "0.1em",
@@ -122,7 +122,7 @@ export default function Home() {
                   transition: "color 0.15s",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#f5f0e8")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#d4cbbb")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#edd8dc")}
               >
                 {link}
               </a>
@@ -141,7 +141,7 @@ export default function Home() {
       {/* ── HERO ──────────────────────────────────────────── */}
       <section
         style={{
-          borderBottom: "3px double var(--ink)",
+          borderBottom: "3px double var(--nav-bg)",
           background: "var(--nav-bg)",
         }}
       >
@@ -158,9 +158,6 @@ export default function Home() {
         >
           {/* Left col */}
           <div className="fade-up fade-up-1">
-            <div className="stamp" style={{ marginBottom: "1.5rem" }}>
-              Social Media Strategist
-            </div>
             <h1
               style={{
                 fontFamily: "var(--font-playfair)",
@@ -197,7 +194,7 @@ export default function Home() {
               <a
                 href="#blog"
                 className="btn-outline"
-                style={{ color: "#d4cbbb", borderColor: "#d4cbbb" }}
+                style={{ color: "#edd8dc", borderColor: "#d4cbbb" }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = "#d4cbbb";
                   e.currentTarget.style.color = "var(--nav-bg)";
@@ -214,21 +211,26 @@ export default function Home() {
 
           {/* Vertical rule */}
           <div
-            style={{ background: "#666", width: "2px", alignSelf: "stretch", minHeight: "300px" }}
+            style={{
+              background: "#a03545",
+              width: "2px",
+              alignSelf: "stretch",
+              minHeight: "300px",
+            }}
           />
 
           {/* Right col */}
           <div className="fade-up fade-up-2" style={{ paddingLeft: "1rem" }}>
             <div
               style={{
-                border: "1px solid #444",
+                border: "1px solid #a03545",
                 padding: "2rem",
                 marginBottom: "1.5rem",
               }}
             >
               <p
                 style={{
-                  color: "#888",
+                  color: "#e0c4cc",
                   fontFamily: "var(--font-garamond)",
                   fontSize: "0.8rem",
                   letterSpacing: "0.15em",
@@ -265,7 +267,7 @@ export default function Home() {
                     </div>
                     <div
                       style={{
-                        color: "#888",
+                        color: "#e0c4cc",
                         fontSize: "0.82rem",
                         fontFamily: "var(--font-garamond)",
                         fontStyle: "italic",
@@ -280,7 +282,7 @@ export default function Home() {
 
             <p
               style={{
-                color: "#888",
+                color: "#e0c4cc",
                 fontSize: "0.78rem",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
@@ -306,11 +308,11 @@ export default function Home() {
                 <span
                   key={c}
                   style={{
-                    color: "#666",
+                    color: "#e0c4cc",
                     fontFamily: "var(--font-playfair)",
                     fontSize: "0.85rem",
                     fontStyle: "italic",
-                    borderRight: "1px solid #444",
+                    borderRight: "1px solid #a03545",
                     paddingRight: "1.5rem",
                   }}
                 >
@@ -325,7 +327,10 @@ export default function Home() {
       {/* ── ABOUT ─────────────────────────────────────────── */}
       <section
         id="about"
-        style={{ padding: "5rem 2rem", borderBottom: "3px double var(--ink)" }}
+        style={{
+          padding: "5rem 2rem",
+          borderBottom: "3px double var(--nav-bg)",
+        }}
       >
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
@@ -357,14 +362,14 @@ export default function Home() {
             <div>
               <div
                 style={{
-                  border: "2px solid var(--ink)",
+                  border: "2px solid var(--nav-bg)",
                   padding: "1.5rem",
                   background: "var(--cream-dark)",
                 }}
               >
                 <div
                   style={{
-                    border: "1px solid var(--ink)",
+                    border: "1px solid var(--nav-bg)",
                     aspectRatio: "3/4",
                     display: "flex",
                     flexDirection: "column",
@@ -408,12 +413,12 @@ export default function Home() {
                       fontFamily: "var(--font-playfair)",
                       fontStyle: "italic",
                       fontSize: "0.9rem",
-                      color: "#888",
+                      color: "#e0c4cc",
                       textAlign: "center",
                       padding: "0 2rem",
                     }}
                   >
-                    Jane Doe
+                    Megan Chin
                     <br />
                     <span style={{ fontSize: "0.75rem", color: "#aaa" }}>
                       Your photo here
@@ -422,7 +427,7 @@ export default function Home() {
                 </div>
                 <div
                   style={{
-                    background: "var(--ink)",
+                    background: "var(--nav-bg)",
                     color: "var(--cream)",
                     padding: "0.5rem 1rem",
                     marginTop: "1rem",
@@ -432,7 +437,7 @@ export default function Home() {
                     textAlign: "center",
                   }}
                 >
-                  Social Media Marketing Strategist · NYC
+                  Social Media Marketing Strategist · AUS
                 </div>
               </div>
             </div>
@@ -473,7 +478,7 @@ export default function Home() {
                 style={{
                   marginTop: "2.5rem",
                   paddingTop: "1.5rem",
-                  borderTop: "1px solid var(--ink)",
+                  borderTop: "1px solid var(--nav-bg)",
                 }}
               >
                 <p
@@ -502,7 +507,7 @@ export default function Home() {
                     <span
                       key={s}
                       style={{
-                        border: "1px solid var(--ink)",
+                        border: "1px solid var(--nav-bg)",
                         padding: "0.25rem 0.75rem",
                         fontSize: "0.78rem",
                         fontFamily: "var(--font-garamond)",
@@ -526,7 +531,7 @@ export default function Home() {
         style={{
           padding: "5rem 2rem",
           background: "var(--cream-dark)",
-          borderBottom: "3px double var(--ink)",
+          borderBottom: "3px double var(--nav-bg)",
         }}
       >
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
@@ -579,7 +584,7 @@ export default function Home() {
                 {/* Card top bar */}
                 <div
                   style={{
-                    background: "var(--ink)",
+                    background: "var(--nav-bg)",
                     padding: "0.5rem 1rem",
                     display: "flex",
                     justifyContent: "space-between",
@@ -599,7 +604,7 @@ export default function Home() {
                   </span>
                   <span
                     style={{
-                      color: "#888",
+                      color: "#e0c4cc",
                       fontFamily: "var(--font-garamond)",
                       fontSize: "0.72rem",
                     }}
@@ -611,7 +616,7 @@ export default function Home() {
                 {/* Illustration */}
                 <div
                   style={{
-                    borderBottom: "1.5px solid var(--ink)",
+                    borderBottom: "1.5px solid var(--nav-bg)",
                     background: "var(--cream)",
                     display: "flex",
                     alignItems: "center",
@@ -621,7 +626,12 @@ export default function Home() {
                   }}
                 >
                   {i === 0 && (
-                    <svg width="100" height="90" viewBox="0 0 80 70" fill="none">
+                    <svg
+                      width="100"
+                      height="90"
+                      viewBox="0 0 80 70"
+                      fill="none"
+                    >
                       <rect
                         x="5"
                         y="10"
@@ -680,7 +690,12 @@ export default function Home() {
                     </svg>
                   )}
                   {i === 1 && (
-                    <svg width="100" height="90" viewBox="0 0 80 70" fill="none">
+                    <svg
+                      width="100"
+                      height="90"
+                      viewBox="0 0 80 70"
+                      fill="none"
+                    >
                       <polyline
                         points="8,60 20,35 32,45 44,20 56,30 68,10"
                         stroke="var(--ink)"
@@ -714,7 +729,12 @@ export default function Home() {
                     </svg>
                   )}
                   {i === 2 && (
-                    <svg width="100" height="90" viewBox="0 0 80 70" fill="none">
+                    <svg
+                      width="100"
+                      height="90"
+                      viewBox="0 0 80 70"
+                      fill="none"
+                    >
                       <rect
                         x="10"
                         y="5"
@@ -855,7 +875,7 @@ export default function Home() {
           {submitted ? (
             <div
               style={{
-                border: "2px solid var(--ink)",
+                border: "2px solid var(--nav-bg)",
                 padding: "3rem",
                 textAlign: "center",
                 background: "var(--card-bg)",
@@ -887,14 +907,14 @@ export default function Home() {
             <form
               onSubmit={handleSubmit}
               style={{
-                border: "2px solid var(--ink)",
+                border: "2px solid var(--nav-bg)",
                 padding: "2.5rem",
                 background: "var(--card-bg)",
               }}
             >
               <div
                 style={{
-                  background: "var(--ink)",
+                  background: "var(--nav-bg)",
                   color: "var(--cream)",
                   padding: "0.6rem 1rem",
                   margin: "-2.5rem -2.5rem 2rem",
@@ -905,7 +925,7 @@ export default function Home() {
                   textAlign: "center",
                 }}
               >
-                Enquiry Form — Jane Doe
+                Enquiry Form — Megan Chin
               </div>
 
               <div
@@ -1007,7 +1027,7 @@ export default function Home() {
             style={{
               marginTop: "2.5rem",
               paddingTop: "1.5rem",
-              borderTop: "1px solid var(--ink)",
+              borderTop: "1px solid var(--nav-bg)",
               display: "flex",
               justifyContent: "center",
               gap: "2rem",
@@ -1044,7 +1064,7 @@ export default function Home() {
       <footer
         style={{
           background: "var(--nav-bg)",
-          borderTop: "3px double #444",
+          borderTop: "3px double #a03545",
           padding: "1.5rem 2rem",
           display: "flex",
           justifyContent: "space-between",
@@ -1059,14 +1079,14 @@ export default function Home() {
             color: "#f5f0e8",
           }}
         >
-          Jane Doe
+          Megan Chin
         </span>
         <span
           style={{
             fontFamily: "var(--font-garamond)",
             fontStyle: "italic",
             fontSize: "0.85rem",
-            color: "#666",
+            color: "#e0c4cc",
           }}
         >
           © 2026 — All rights reserved
@@ -1077,7 +1097,7 @@ export default function Home() {
               key={link}
               href={`#${link.toLowerCase()}`}
               style={{
-                color: "#888",
+                color: "#e0c4cc",
                 fontFamily: "var(--font-garamond)",
                 fontStyle: "italic",
                 fontSize: "0.85rem",
@@ -1085,7 +1105,7 @@ export default function Home() {
                 transition: "color 0.15s",
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#f5f0e8")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#888")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#e0c4cc")}
             >
               {link}
             </a>
